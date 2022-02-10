@@ -26,6 +26,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import DefaultPage from './components/DefaultPage';
 import Book from './components/Book';
+import Villa from './components/Villa';
 import {AddBook} from './components/AddBook';
 
 setupIonicReact();
@@ -48,6 +49,11 @@ const App: React.FC = () => (
           <Route path="/EditBook/:recordId" exact={true}>
             <AddBook />
           </Route>
+
+          <Route path="/Villa" exact={true}>
+            <Villa />
+          </Route>
+
           <Route path="/page/:name" exact={true}>
             <DefaultPage />
           </Route>

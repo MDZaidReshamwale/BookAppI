@@ -28,18 +28,19 @@ import {
       iosIcon: bookOutline,
       mdIcon: bookOutline
     },
-    {
-      title: 'Villa',
-      url: '/AddBook',
-      iosIcon: homeOutline,
-      mdIcon: homeOutline
-    },
+  
     {
       title: 'AddBook',
       url: '/AddBook',
       iosIcon: addCircleOutline,
       mdIcon: addCircleOutline
     },
+    {
+      title: 'Villa',
+      url: '/Villa',
+      iosIcon: homeOutline,
+      mdIcon: homeOutline
+    }
    
    
   ];
