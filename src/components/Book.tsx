@@ -98,7 +98,7 @@ const deleteBookHandler = async (id:number) =>{
                   <p>{item.isbn}</p>
                   <p>{item.year}</p>
                 </IonLabel>
-                <IonIcon onClick={()=>{history.push('/EditCustomer/'+item.id)}} size={'10'} icon={pencil}  ></IonIcon>
+                <IonIcon onClick={()=>{history.push('/EditBook/'+item.id)}} size={'10'} icon={pencil}  ></IonIcon>
                 <IonIcon onClick={() => deleteBookHandler(item.id)} size={'10'} icon={trash} />
               
                  

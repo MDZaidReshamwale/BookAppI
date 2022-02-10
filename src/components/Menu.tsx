@@ -23,14 +23,14 @@ import {
   
   const appPages: AppPage[] = [
     {
-      title: 'Customer',
-      url: '/Customer',
+      title: 'Book',
+      url: '/Book',
       iosIcon: personCircleOutline,
       mdIcon: personCircleOutline
     },
     {
-      title: 'AddCustomer',
-      url: '/AddCustomer',
+      title: 'AddBook',
+      url: '/AddBook',
       iosIcon: personAddOutline,
       mdIcon: personAddOutline
     },
