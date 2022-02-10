@@ -1,5 +1,5 @@
-import { IonThumbnail, IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar } from '@ionic/react';
-import { createOutline, add, pencil, pencilSharp, trash, trashBin, personSharp} from 'ionicons/icons';
+import { IonButton,IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar, IonThumbnail, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent } from '@ionic/react';
+import { pinOutline,    createOutline, add, pencil, pencilSharp, trash, trashBin, personSharp} from 'ionicons/icons';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import Header from './Header';
@@ -68,22 +68,28 @@ const Book: React.FC = () => {
         <IonContent fullscreen>
           <IonList>
             <IonItem>
-              <IonSearchbar value={searchBook} onIonChange={handleSearch} placeholder="Search" animated color="info"></IonSearchbar>
+              <IonSearchbar value={searchBook} onIonChange={handleSearch} placeholder="Search by Price" animated color="danger" inputmode="numeric"></IonSearchbar>
             </IonItem>
             {filteredItems.map((item, index) => (
               <IonItem key={index}>
-                <IonThumbnail slot="start">
-                  <img src={item.image} />
-                </IonThumbnail>
-                <IonLabel>
-                <h3>{item.title}</h3>
-                    </IonLabel>
-                <IonLabel>
-                  <h2>{item.price}</h2>
-                  <p>{item.Location}</p>
-                 
-                </IonLabel>
-              
+                
+      
+                <IonCard>
+          <img src={item.image} />
+          <IonCardHeader>
+            <IonCardSubtitle>{item.title}</IonCardSubtitle>
+            {/* <IonCardTitle>{data.price}</IonCardTitle> */}
+            <p>{item.price}</p>
+          </IonCardHeader>
+          <IonCardContent>
+           <IonIcon icon={pinOutline}/>{item.Location} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IonButton color="danger" size='small'  >More</IonButton>
+            <IonButton size='small' color="danger" >Book Villa</IonButton>
+           
+
+
+          </IonCardContent>
+        </IonCard>
+     
             
               </IonItem>
             ))}
