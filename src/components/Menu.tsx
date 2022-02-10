@@ -11,7 +11,7 @@ import {
   } from '@ionic/react';
   
   import { useLocation } from 'react-router-dom';
-  import { bookOutline , addCircleOutline, personAddOutline,  personCircleOutline,   } from 'ionicons/icons';
+  import { homeOutline ,bookOutline , addCircleOutline  } from 'ionicons/icons';
   import './Menu.css';
   
   interface AppPage {
@@ -29,11 +29,18 @@ import {
       mdIcon: bookOutline
     },
     {
+      title: 'Villa',
+      url: '/AddBook',
+      iosIcon: homeOutline,
+      mdIcon: homeOutline
+    },
+    {
       title: 'AddBook',
       url: '/AddBook',
       iosIcon: addCircleOutline,
       mdIcon: addCircleOutline
     },
+   
    
   ];
 
