@@ -1,5 +1,5 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar } from '@ionic/react';
-import { add, pencil, pencilSharp, trash, trashBin, personSharp} from 'ionicons/icons';
+import { IonThumbnail, IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar , IonList, IonItem, IonLabel, IonInput, IonToggle, IonRadio, IonCheckbox, IonItemSliding, IonItemOption, IonItemOptions, IonAvatar,IonIcon,IonFabButton,IonFab, IonSearchbar } from '@ionic/react';
+import { createOutline, add, pencil, pencilSharp, trash, trashBin, personSharp} from 'ionicons/icons';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import Header from './Header';
@@ -88,17 +88,19 @@ const deleteBookHandler = async (id:number) =>{
             </IonItem>
             {filteredItems.map((item, index) => (
               <IonItem key={index}>
-                <IonAvatar slot="start">
+                <IonThumbnail slot="start">
                   <img src={item.cover} />
-                </IonAvatar>
+                </IonThumbnail>
+                <IonLabel>
+                <h3>{item.author}</h3>
+                    </IonLabel>
                 <IonLabel>
                   <h2>{item.title}</h2>
-                  <h3>{item.author}</h3>
                   <p>{item.publisher}</p>
                   <p>{item.isbn}</p>
                   <p>{item.year}</p>
                 </IonLabel>
-                <IonIcon onClick={()=>{history.push('/EditBook/'+item.id)}} size={'10'} icon={pencil}  ></IonIcon>
+                <IonIcon onClick={()=>{history.push('/EditBook/'+item.id)}} size={'10'} style={{marginRight:"10px"}} icon={createOutline}  ></IonIcon>
                 <IonIcon onClick={() => deleteBookHandler(item.id)} size={'10'} icon={trash} />
               
                  
@@ -107,7 +109,7 @@ const deleteBookHandler = async (id:number) =>{
             ))}
           </IonList> 
            <IonFab vertical="bottom" horizontal="end"slot="fixed">   
-           <a href="/AddCustomer" >
+           <a href="/AddBook" >
              <IonFabButton>
                 <IonIcon icon={add}/>
                  </IonFabButton>

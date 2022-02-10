@@ -44,12 +44,15 @@ const App: React.FC = () => (
           <Route path="/AddBook" exact={true}>
             <AddBook />
           </Route>
-          {/* edit customer */}
+          {/* edit book */}
           <Route path="/EditBook/:recordId" exact={true}>
             <AddBook />
           </Route>
+          <Route path="/page/:name" exact={true}>
+            <DefaultPage />
+          </Route>
           <Route path="/" exact={true}>
-            <Redirect to="/page/Inbox" />
+            <Redirect to="/page/BookApp" />
           </Route>
       </IonRouterOutlet>
       </IonSplitPane>

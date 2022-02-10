@@ -104,7 +104,11 @@ export const AddBook: React.FC = () => {
             <IonInput placeholder="Enter the Image URL" name="cover"
             value={book.cover}
             onIonChange={(e:any)=>setBook({...book,cover:e.detail.value})}
-             type="text" ></IonInput>
+             type="text" >
+                 <IonAvatar slot="start">
+            <img src={book.cover} />
+            </IonAvatar>
+             </IonInput>
           </IonItem>
 
           
