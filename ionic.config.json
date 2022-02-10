@@ -1,0 +1,7 @@
+{
+  "name": "BookAppI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
