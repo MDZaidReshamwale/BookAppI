@@ -11,7 +11,7 @@ import {
   } from '@ionic/react';
   
   import { useLocation } from 'react-router-dom';
-  import { archiveOutline, personAddOutline,  archiveSharp, bookmarkOutline, checkboxSharp, heartOutline, heartSharp, list, mailOutline, mailSharp, personCircleOutline,  paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+  import { bookOutline , addCircleOutline, personAddOutline,  personCircleOutline,   } from 'ionicons/icons';
   import './Menu.css';
   
   interface AppPage {
@@ -25,14 +25,14 @@ import {
     {
       title: 'Book',
       url: '/Book',
-      iosIcon: personCircleOutline,
-      mdIcon: personCircleOutline
+      iosIcon: bookOutline,
+      mdIcon: bookOutline
     },
     {
       title: 'AddBook',
       url: '/AddBook',
-      iosIcon: personAddOutline,
-      mdIcon: personAddOutline
+      iosIcon: addCircleOutline,
+      mdIcon: addCircleOutline
     },
    
   ];
