@@ -78,7 +78,7 @@ const Book: React.FC = () => {
           <img src={item.image} />
           <IonCardHeader>
             <IonCardSubtitle>{item.title}</IonCardSubtitle>
-           
+
             <p>{item.price}</p>
           </IonCardHeader>
           <IonCardContent>
