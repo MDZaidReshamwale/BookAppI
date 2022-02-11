@@ -15,7 +15,7 @@ const Book: React.FC = () => {
     const history = useHistory();
 
     const [items,setItems] = useState([]);
-    // get book from service 
+    // get villa from service 
     const [villaList, setVilla] = useState([ {
         "id":1,
         "image":"https://training.pyther.com/books/9780746066928_cover_image.jpg",
@@ -35,7 +35,7 @@ const Book: React.FC = () => {
         let unlisten = history.listen((location, action) => {
             loadVillas(); // after coming from Edit
           });
-          loadVillas(); // when URL is /Book and refresh
+          loadVillas(); // when URL is /Villa and refresh
           return(unlisten);
   }, []);
  
@@ -78,7 +78,7 @@ const Book: React.FC = () => {
           <img src={item.image} />
           <IonCardHeader>
             <IonCardSubtitle>{item.title}</IonCardSubtitle>
-            {/* <IonCardTitle>{data.price}</IonCardTitle> */}
+
             <p>{item.price}</p>
           </IonCardHeader>
           <IonCardContent>
