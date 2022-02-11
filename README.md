@@ -26,7 +26,7 @@
 
 #  :point_down: Upcoming Feaures :point_down: 
 
-   :point_right: Getting books on particluar "AUTHOR"
+   :point_right: Getting books on particluar "AUTHOR" <br/>
    :point_right: Modification on the UI and security 
  
  
