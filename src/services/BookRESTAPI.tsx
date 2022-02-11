@@ -82,3 +82,20 @@ return response;
 console.log(error);
 });
 }
+
+// get book  by author name
+export const getBookByAuthor = async (author:any) =>{
+  return fetch(apiEndPoint + "/"+author, {
+    method: 'get',
+      headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+        }
+    })
+    .then(response => response.json())
+    .then(response => {
+    //console.log(JSON.stringify(response));
+    return response;
+    }).catch(function(error) {
+    console.log(error);
+    });
+    }
