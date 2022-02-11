@@ -28,6 +28,8 @@ import DefaultPage from './components/DefaultPage';
 import Book from './components/Book';
 import Villa from './components/Villa';
 import {AddBook} from './components/AddBook';
+import Login from './pages/Login';
+import Author from './components/Author';
 
 setupIonicReact();
 
@@ -54,11 +56,18 @@ const App: React.FC = () => (
             <Villa />
           </Route>
 
+          <Route path="/Author/:recordId" exact={true}>
+            <Author />
+          </Route>
+          
+
+           
+
           <Route path="/page/:name" exact={true}>
             <DefaultPage />
           </Route>
           <Route path="/" exact={true}>
-            <Redirect to="/page/BookApp" />
+           <Login/>
           </Route>
       </IonRouterOutlet>
       </IonSplitPane>
