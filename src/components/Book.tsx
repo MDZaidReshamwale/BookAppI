@@ -50,6 +50,13 @@ const handleUpdate = (item:any) =>{
     loadBooks();
 }
 
+// get author book
+const getAuthorBook = (author:any) =>{
+    console.log(">> getAuthorBook");
+    console.log("author::",author);
+    setItems(author);
+    loadBooks();
+}
 
 //   delete
 const deleteBookHandler = async (id:number) =>{
@@ -92,7 +99,7 @@ const deleteBookHandler = async (id:number) =>{
                   <img src={item.cover} />
                 </IonThumbnail>
                 <IonLabel>
-                <h3>{item.author}</h3>
+                <h3 onClick={() =>history.push('/Author/'+item.author)} >{item.author}</h3>
                     </IonLabel>
                 <IonLabel>
                   <h2>{item.title}</h2>
