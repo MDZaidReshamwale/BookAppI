@@ -67,7 +67,7 @@ const App: React.FC = () => (
             <DefaultPage />
           </Route>
           <Route path="/" exact={true}>
-           <Login/>
+           <Book/>
           </Route>
       </IonRouterOutlet>
       </IonSplitPane>
